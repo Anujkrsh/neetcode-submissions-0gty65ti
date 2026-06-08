@@ -1,0 +1,13 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+
+        for(int num: nums){
+            if(set.add(num)){
+                continue;
+            }
+            return true;
+        }       
+        return false;
+    }
+}
